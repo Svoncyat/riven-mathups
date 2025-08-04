@@ -1,0 +1,37 @@
+/* ===================== */
+/* Hechizos de Invocador */
+/* ===================== */
+
+.matchup-summoner-spells {
+    display: flex;
+    flex-direction: column;
+    flex: .5;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.matchup-subtitle {
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.matchup-summoners-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.matchup-summoner-spell {
+    width: 40px;
+    height: 40px;
+}
+
+.matchup-summoner-spell img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}

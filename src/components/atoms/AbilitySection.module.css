@@ -1,0 +1,22 @@
+/* ======================= */
+/* Sección de habilidades */
+/* ======================= */
+
+.matchup-abilities {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+}
+
+.matchup-abilities div {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.matchup-abilities img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

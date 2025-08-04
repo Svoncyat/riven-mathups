@@ -1,0 +1,26 @@
+.matchup-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    border: var(--border-width) solid var(--border-primary);
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-secondary);
+    overflow: hidden;
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.matchup-header {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    border-bottom: 1px solid hsl(222, 10%, 17%);
+}
+
+.matchup-subtitle {
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}

@@ -1,0 +1,42 @@
+/* ================================= */
+/* Contenido principal de la tarjeta */
+/* ================================= */
+
+.matchup-content {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.2;
+}
+
+.matchup-content section {
+    flex: 1;
+}
+
+.matchup-content section:not(:last-child) {
+    border-right: 1px solid hsl(222, 10%, 17%);
+}
+
+.matchup-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.matchup-content ul {
+    padding: 0 0 0 20px;
+}
+
+.matchup-content p {
+    font-size: 0.875rem;
+}
+
+.matchup-notes {
+    padding: 20px;
+}
+
+.matchup-to-do {
+    padding: 20px;
+}
+
+.matchup-to-avoid {
+    padding: 20px;
+}

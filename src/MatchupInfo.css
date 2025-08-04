@@ -1,0 +1,377 @@
+.matchup-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    border: var(--border-width) solid var(--border-primary);
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-secondary);
+    overflow: hidden;
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.matchup-header {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    border-bottom: 1px solid hsl(222, 10%, 17%);
+}
+
+/* ======================= */
+/* Información del campeón */
+/* ======================= */
+
+.matchup-data {
+    width: 374px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px 20px 20px;
+    gap: var(--spacing-md);
+}
+
+
+.matchup-portrait {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.matchup-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.matchup-portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: var(--shadow-inset-medium);
+    border-radius: var(--border-radius-sm);
+    pointer-events: none;
+}
+
+.matchup-name {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.matchup-nickname {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(222, 14%, 70%);
+}
+
+.matchup-abilities {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+}
+
+.matchup-abilities div {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.matchup-abilities img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.matchup-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.matchup-difficulty {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.matchup-difficulty-bar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: hsl(220, 4%, 45%);
+    border: 1px solid hsl(222, 10%, 17%);
+    border-radius: 50px;
+}
+
+.matchup-difficulty-title {
+    margin: 0;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+
+.matchup-difficulty-value {
+    margin: 0;
+    padding: 5px 10px;
+    border-right: 1px solid hsl(222, 10%, 17%);
+}
+
+.matchup-difficulty-value:last-child {
+    border-right: none;
+}
+
+.matchup-difficulty-value p {
+    margin: 0;
+}
+
+
+/* .matchup-difficulty-value:has(.matchup-difficulty-easy) {
+    background-color: #00ff083d;
+    border-radius: 50px 0px 0px 50px;
+    color: var(--difficulty-easy);
+    font-weight: 600;
+} */
+
+.matchup-difficulty-value:has(.matchup-difficulty-medium) {
+    background-color: #ff990050;
+    color: var(--difficulty-medium);
+    font-weight: 600;
+}
+
+/* .matchup-difficulty-value:has(.matchup-difficulty-hard) {
+    background-color: #f443363d;
+    color: var(--difficulty-hard);
+    font-weight: 600;
+} */
+
+/* .matchup-difficulty-value:has(.matchup-difficulty-extreme) {
+    background-color: #9b27b03b;
+    border-radius: 0px 50px 50px 0px;
+    color: var(--difficulty-extreme);
+    font-weight: 600;
+} */
+
+/* =============================== */
+/* Runas y Fragmentos de Habilidad */
+/* =============================== */
+
+.matchup-runes-stats {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.matchup-subtitle {
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.matchup-runes img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.matchup-primary-path,
+.matchup-secondary-path {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.matchup-primary-path::after,
+.matchup-secondary-path::after,
+.matchup-stat-shards::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 90%;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: #181d27;
+    border: 1px solid #091120;
+    outline: 1px solid #d9b66f;
+}
+
+.matchup-secondary-path::after {
+    outline: 1px solid #49abba;
+    width: 50%;
+}
+
+.matchup-stat-shards::after {
+    height: 2px;
+    background: #aaaaaa;
+    border: none;
+    outline: none;
+    left: 70%;
+    width: 24%;
+}
+
+.matchup-rune {
+    width: 42px;
+    height: 42px;
+    background: #13151b;
+    border: 2px solid #d9b66f;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.matchup-secondary-path .matchup-rune {
+    border: 2px solid #49abba;
+}
+
+.matchup-primary-rune img,
+.matchup-secondary-rune img {
+    width: 100%;
+    height: 100%;
+    transform: scale(.5);
+}
+
+.matchup-keystone img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.9);
+}
+
+.matchup-stat-shards {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    height: 100%;
+    justify-content: center;
+}
+
+.matchup-stats img {
+    width: 100%;
+    height: 100%;
+    transform: scale(.8);
+}
+
+.matchup-stat {
+    width: 25px;
+    height: 25px;
+    background: #13151b;
+    border: 2px solid #aaaaaa;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+/* ===================== */
+/* Hechizos de Invocador */
+/* ===================== */
+
+.matchup-summoner-spells {
+    display: flex;
+    flex-direction: column;
+    flex: .5;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.matchup-summoners-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.matchup-summoner-spell {
+    width: 40px;
+    height: 40px;
+}
+
+.matchup-summoner-spell img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* ================================ */
+/* Objetos Iniciales y Recomendados */
+/* ================================ */
+
+.matchup-items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0px;
+    width: 220px;
+}
+
+.matchup-starting-items,
+.matchup-recommended-items {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.matchup-item {
+    width: 35px;
+    height: 35px;
+}
+
+.matchup-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ================================= */
+/* Contenido principal de la tarjeta */
+/* ================================= */
+
+.matchup-content {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.2;
+}
+
+.matchup-content section {
+    flex: 1;
+}
+
+.matchup-content section:not(:last-child) {
+    border-right: 1px solid hsl(222, 10%, 17%);
+}
+
+.matchup-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.matchup-content ul {
+    padding: 0 0 0 20px;
+}
+
+.matchup-content p {
+    font-size: 0.875rem;
+}
+
+.matchup-notes {
+    padding: 20px;
+}
+
+.matchup-to-do {
+    padding: 20px;
+}
+
+.matchup-to-avoid {
+    padding: 20px;
+}

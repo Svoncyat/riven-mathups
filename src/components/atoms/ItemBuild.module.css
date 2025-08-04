@@ -1,0 +1,39 @@
+/* ================================ */
+/* Objetos Iniciales y Recomendados */
+/* ================================ */
+
+.matchup-items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0px;
+    width: 220px;
+}
+
+.matchup-subtitle {
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.matchup-starting-items,
+.matchup-recommended-items {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.matchup-item {
+    width: 35px;
+    height: 35px;
+}
+
+.matchup-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

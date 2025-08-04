@@ -1,0 +1,106 @@
+/* =============================== */
+/* Runas y Fragmentos de Habilidad */
+/* =============================== */
+
+.matchup-runes-stats {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.matchup-runes img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.matchup-primary-path,
+.matchup-secondary-path {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.matchup-primary-path::after,
+.matchup-secondary-path::after,
+.matchup-stat-shards::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 90%;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: #181d27;
+    border: 1px solid #091120;
+    outline: 1px solid #d9b66f;
+}
+
+.matchup-secondary-path::after {
+    outline: 1px solid #49abba;
+    width: 50%;
+}
+
+.matchup-stat-shards::after {
+    height: 2px;
+    background: #aaaaaa;
+    border: none;
+    outline: none;
+    left: 70%;
+    width: 24%;
+}
+
+.matchup-rune {
+    width: 42px;
+    height: 42px;
+    background: #13151b;
+    border: 2px solid #d9b66f;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.matchup-secondary-path .matchup-rune {
+    border: 2px solid #49abba;
+}
+
+.matchup-primary-rune img,
+.matchup-secondary-rune img {
+    width: 100%;
+    height: 100%;
+    transform: scale(.5);
+}
+
+.matchup-keystone img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.9);
+}
+
+.matchup-stat-shards {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    height: 100%;
+    justify-content: center;
+}
+
+.matchup-stats img {
+    width: 100%;
+    height: 100%;
+    transform: scale(.8);
+}
+
+.matchup-stat {
+    width: 25px;
+    height: 25px;
+    background: #13151b;
+    border: 2px solid #aaaaaa;
+    border-radius: 100%;
+    z-index: 2;
+}
