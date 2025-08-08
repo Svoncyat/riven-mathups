@@ -60,6 +60,7 @@
   --shadow-inset-easy: inset 0 0 0 var(--border-width-thick) var(--difficulty-easy);
   --shadow-inset-medium: inset 0 0 0 var(--border-width-thick) var(--difficulty-medium);
   --shadow-inset-hard: inset 0 0 0 var(--border-width-thick) var(--difficulty-hard);
+  --shadow-inset-extreme: inset 0 0 0 var(--border-width-thick) var(--difficulty-extreme);
   
   /* Transiciones */
   --transition-fast: 0.15s ease;
@@ -88,10 +89,6 @@ body {
     gap: var(--spacing-md);
 }
 
-h2 {
-    margin: 0;
-}
-
-h3 {
+h1, h2, h3, p {
     margin: 0;
 }

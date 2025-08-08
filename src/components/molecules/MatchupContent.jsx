@@ -8,7 +8,7 @@ export function MatchupContent({ strategy }) {
                 <ul>
                     {strategy.notes.map((note, index) => (
                         <li key={index}>
-                            <p>{note}</p>
+                            <p className={styles['matchup-hint-paragraph']}>{note}</p>
                         </li>
                     ))}
                 </ul>
@@ -18,7 +18,7 @@ export function MatchupContent({ strategy }) {
                 <ul>
                     {strategy.toDo.map((item, index) => (
                         <li key={index}>
-                            <p>{item}</p>
+                            <p className={styles['matchup-hint-paragraph']}>{item}</p>
                         </li>
                     ))}
                 </ul>
@@ -28,7 +28,7 @@ export function MatchupContent({ strategy }) {
                 <ul>
                     {strategy.toAvoid.map((item, index) => (
                         <li key={index}>
-                            <p>{item}</p>
+                            <p className={styles['matchup-hint-paragraph']}>{item}</p>
                         </li>
                     ))}
                 </ul>

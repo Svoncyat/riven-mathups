@@ -29,9 +29,24 @@
     content: "";
     position: absolute;
     inset: 0;
-    box-shadow: var(--shadow-inset-medium);
     border-radius: var(--border-radius-sm);
     pointer-events: none;
+}
+
+.matchup-portrait-easy::after {
+    box-shadow: var(--shadow-inset-easy);
+}
+
+.matchup-portrait-medium::after {
+    box-shadow: var(--shadow-inset-medium);
+}
+
+.matchup-portrait-hard::after {
+    box-shadow: var(--shadow-inset-hard);
+}
+
+.matchup-portrait-extreme::after {
+    box-shadow: var(--shadow-inset-extreme);
 }
 
 .matchup-name {

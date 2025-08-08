@@ -29,6 +29,10 @@
     font-size: 0.875rem;
 }
 
+.matchup-hint-paragraph {
+    margin: .875rem 0;
+}
+
 .matchup-notes {
     padding: 20px;
 }

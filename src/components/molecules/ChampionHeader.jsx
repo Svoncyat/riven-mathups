@@ -5,9 +5,9 @@ import styles from './ChampionHeader.module.css'
 
 export function ChampionHeader({ champion }) {
     return (
-        <>
+        <div className={styles['matchup-champion']}>
             <div className={styles['matchup-data']}>
-                <div className={styles['matchup-portrait']}>
+                <div className={`${styles['matchup-portrait']} ${styles[`matchup-portrait-${champion.difficulty}`]}`}>
                     <img src={champion.portrait} alt={`${champion.name} portrait`} />
                 </div>
                 <div className={styles['matchup-info']}>
@@ -19,6 +19,6 @@ export function ChampionHeader({ champion }) {
                 </div>
             </div>
             <DifficultyBadge difficulty={champion.difficulty} />
-        </>
+        </div>
     );
 }

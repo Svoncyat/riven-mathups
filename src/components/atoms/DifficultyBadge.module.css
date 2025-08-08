@@ -40,44 +40,29 @@
     margin: 0;
 }
 
-.matchup-difficulty-easy {
-    color: var(--difficulty-easy);
-}
-
-.matchup-difficulty-medium {
-    color: var(--difficulty-medium);
-}
-
-.matchup-difficulty-hard {
-    color: var(--difficulty-hard);
-}
-
-.matchup-difficulty-extreme {
-    color: var(--difficulty-extreme);
-}
-
-/* .matchup-difficulty-value:has(.matchup-difficulty-easy) {
+/* Estilos para dificultades activas */
+.matchup-difficulty-easy .matchup-difficulty-value:first-child {
     background-color: #00ff083d;
     border-radius: 50px 0px 0px 50px;
     color: var(--difficulty-easy);
     font-weight: 600;
-} */
+}
 
-.matchup-difficulty-value:has(.matchup-difficulty-medium) {
+.matchup-difficulty-medium .matchup-difficulty-value:nth-child(2) {
     background-color: #ff990050;
     color: var(--difficulty-medium);
     font-weight: 600;
 }
 
-/* .matchup-difficulty-value:has(.matchup-difficulty-hard) {
+.matchup-difficulty-hard .matchup-difficulty-value:nth-child(3) {
     background-color: #f443363d;
     color: var(--difficulty-hard);
     font-weight: 600;
-} */
+}
 
-/* .matchup-difficulty-value:has(.matchup-difficulty-extreme) {
+.matchup-difficulty-extreme .matchup-difficulty-value:last-child {
     background-color: #9b27b03b;
     border-radius: 0px 50px 50px 0px;
     color: var(--difficulty-extreme);
     font-weight: 600;
-} */
+}
