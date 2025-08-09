@@ -1,10 +1,10 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 
 export const dariusMatchup = {
   id: 'darius',
-  name: 'Darius',
-  nickname: 'La Mano de Noxus',
+  name: await getChampionInfo.getChampionName('Darius'),
+  nickname: await getChampionInfo.getChampionTitle('Darius'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Darius.png',
   abilities: {

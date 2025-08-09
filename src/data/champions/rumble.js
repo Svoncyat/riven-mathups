@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const rumbleMatchup = {
   id: 'rumble',
-  name: 'Rumble',
-  nickname: 'La Amenaza Mecánica',
+  name: await getChampionInfo.getChampionName('Rumble'),
+  nickname: await getChampionInfo.getChampionTitle('Rumble'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: await generateImageUrl.championPortrait('Rumble'),
   

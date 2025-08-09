@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const malphiteMatchup = {
   id: 'malphite',
-  name: 'Malphite',
-  nickname: 'Fragmento del Monolito',
+  name: await getChampionInfo.getChampionName('Malphite'),
+  nickname: await getChampionInfo.getChampionTitle('Malphite'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Malphite.png',
 

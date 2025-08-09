@@ -13,11 +13,11 @@ Cada campeón debe tener su propio archivo `.js` dentro de `src/data/champions/`
 Todos los archivos de matchup deben comenzar con estas importaciones obligatorias:
 
 ```javascript
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 ```
 
 - **`DIFFICULTY_LEVELS`**: Constantes para los niveles de dificultad del matchup.
+- **`getChampionInfo`**: Funciones helper que obtienen información dinámica del campeón basada en la última versión del parche de League of Legends.
 - **`generateImageUrl`**: Funciones helper que generan URLs dinámicas basadas en la última versión del parche de League of Legends.
 
 ### 2. Información Básica del Campeón
@@ -343,8 +343,7 @@ export function AppLayout() {
 **Causa**: Falta la extensión `.js` en las importaciones.
 **Solución**: Asegúrate de que todas las importaciones incluyan `.js`:
 ```javascript
-import { DIFFICULTY_LEVELS } from '../constants.js'; // ✅ Correcto
-import { generateImageUrl } from '../constants.js';  // ✅ Correcto
+import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js'; // ✅ Correcto
 ```
 
 ### 2. Error: "Cannot read property of undefined"

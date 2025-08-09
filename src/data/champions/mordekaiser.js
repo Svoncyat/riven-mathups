@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const mordekaizerMatchup = {
   id: 'mordekaiser',
-  name: 'Mordekaiser',
-  nickname: 'El Emperador de Hierro',
+  name: await getChampionInfo.getChampionName('Mordekaiser'),
+  nickname: await getChampionInfo.getChampionTitle('Mordekaiser'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Mordekaiser.png',
   

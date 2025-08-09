@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const lissandraMatchup = {
   id: 'lissandra',
-  name: 'Lissandra',
-  nickname: 'La Bruja de Hielo',
+  name: await getChampionInfo.getChampionName('Lissandra'),
+  nickname: await getChampionInfo.getChampionTitle('Lissandra'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Lissandra.png',
   

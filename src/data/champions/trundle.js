@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const trundleMatchup = {
   id: 'trundle',
-  name: 'Trundle',
-  nickname: 'El Rey Troll',
+  name: await getChampionInfo.getChampionName('Trundle'),
+  nickname: await getChampionInfo.getChampionTitle('Trundle'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('Trundle'),
   

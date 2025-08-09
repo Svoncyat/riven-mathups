@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const warwickMatchup = {
   id: 'warwick',
-  name: 'Warwick',
-  nickname: 'La Ira Desatada de Zaun',
+  name: await getChampionInfo.getChampionName('Warwick'),
+  nickname: await getChampionInfo.getChampionTitle('Warwick'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('Warwick'),
   

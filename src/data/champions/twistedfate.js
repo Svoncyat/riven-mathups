@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const twistedfateMatchup = {
   id: 'twistedfate',
-  name: 'Twisted Fate',
-  nickname: 'El Maestro de las Cartas',
+  name: await getChampionInfo.getChampionName('TwistedFate'),
+  nickname: await getChampionInfo.getChampionTitle('TwistedFate'),
   difficulty: DIFFICULTY_LEVELS.EXTREME,
   portrait: await generateImageUrl.championPortrait('TwistedFate'),
   

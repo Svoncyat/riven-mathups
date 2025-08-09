@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const volibearMatchup = {
   id: 'volibear',
-  name: 'Volibear',
-  nickname: 'El Trueno Implacable',
+  name: await getChampionInfo.getChampionName('Volibear'),
+  nickname: await getChampionInfo.getChampionTitle('Volibear'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('Volibear'),
   

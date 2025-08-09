@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const akshanMatchup = {
   id: 'akshan',
-  name: 'Akshan',
-  nickname: 'El Centinela Rebelde',
+  name: await getChampionInfo.getChampionName('Akshan'),
+  nickname: await getChampionInfo.getChampionTitle('Akshan'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Akshan.png',
   abilities: {

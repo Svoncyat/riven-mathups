@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const karmaMatchup = {
   id: 'karma',
-  name: "Karma",
-  nickname: "La Iluminada",
+  name: await getChampionInfo.getChampionName('Karma'),
+  nickname: await getChampionInfo.getChampionTitle('Karma'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: "https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Karma.png",
   

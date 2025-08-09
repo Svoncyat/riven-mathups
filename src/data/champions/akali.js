@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const akaliMatchup = {
   id: 'akali',
-  name: 'Akali',
-  nickname: 'La Asesina Furtiva',
+  name: await getChampionInfo.getChampionName('Akali'),
+  nickname: await getChampionInfo.getChampionTitle('Akali'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Akali.png',
   abilities: {

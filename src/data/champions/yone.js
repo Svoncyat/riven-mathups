@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const yoneMatchup = {
   id: 'yone',
-  name: 'Yone',
-  nickname: 'El Imperdonable',
+  name: await getChampionInfo.getChampionName('Yone'),
+  nickname: await getChampionInfo.getChampionTitle('Yone'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: await generateImageUrl.championPortrait('Yone'),
   

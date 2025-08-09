@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const renektonMatchup = {
   id: 'renekton',
-  name: 'Renekton',
-  nickname: 'El Carnicero de las Arenas',
+  name: await getChampionInfo.getChampionName('Renekton'),
+  nickname: await getChampionInfo.getChampionTitle('Renekton'),
   difficulty: DIFFICULTY_LEVELS.EXTREME,
   portrait: await generateImageUrl.championPortrait('Renekton'),
   

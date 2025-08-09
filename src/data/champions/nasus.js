@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const nasusMatchup = {
   id: 'nasus',
-  name: 'Nasus',
-  nickname: 'El Curador de las Arenas',
+  name: await getChampionInfo.getChampionName('Nasus'),
+  nickname: await getChampionInfo.getChampionTitle('Nasus'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Nasus.png',
   abilities: {

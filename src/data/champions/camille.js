@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const camilleMatchup = {
   id: 'camille',
-  name: 'Camille',
-  nickname: 'La Sombra de Acero',
+  name: await getChampionInfo.getChampionName('Camille'),
+  nickname: await getChampionInfo.getChampionTitle('Camille'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Camille.png',
   abilities: {

@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const pantheonMatchup = {
   id: 'pantheon',
-  name: 'Pantheon',
-  nickname: 'La Lanza Inquebrantable',
+  name: await getChampionInfo.getChampionName('Pantheon'),
+  nickname: await getChampionInfo.getChampionTitle('Pantheon'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: await generateImageUrl.championPortrait('Pantheon'),
   

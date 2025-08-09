@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const sionMatchup = {
   id: 'sion',
-  name: 'Sion',
-  nickname: 'El Coloso No Muerto',
+  name: await getChampionInfo.getChampionName('Sion'),
+  nickname: await getChampionInfo.getChampionTitle('Sion'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: await generateImageUrl.championPortrait('Sion'),
   

@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const maokaiMatchup = {
   id: 'maokai',
-  name: 'Maokai',
-  nickname: 'El Ent Retorcido',
+  name: await getChampionInfo.getChampionName('Maokai'),
+  nickname: await getChampionInfo.getChampionTitle('Maokai'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Maokai.png',
   

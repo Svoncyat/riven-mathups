@@ -1,10 +1,10 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 
 export const fioraMatchup = {
   id: 'fiora',
-  name: 'Fiora',
-  nickname: 'La Gran Duelista',
+  name: await getChampionInfo.getChampionName('Fiora'),
+  nickname: await getChampionInfo.getChampionTitle('Fiora'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Fiora.png',
   abilities: {

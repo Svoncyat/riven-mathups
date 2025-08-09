@@ -1,10 +1,10 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 
 export const drmundoMatchup = {
   id: 'drmundo',
-  name: 'Dr. Mundo',
-  nickname: 'El Loco de Zaun',
+  name: await getChampionInfo.getChampionName('DrMundo'),
+  nickname: await getChampionInfo.getChampionTitle('DrMundo'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/DrMundo.png',
   abilities: {

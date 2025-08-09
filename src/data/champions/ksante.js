@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const ksanteMatchup = {
   id: 'ksante',
-  name: "K'Sante",
-  nickname: "El Orgullo de Nazumah",
+  name: await getChampionInfo.getChampionName('KSante'),
+  nickname: await getChampionInfo.getChampionTitle('KSante'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: "https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/KSante.png",
   

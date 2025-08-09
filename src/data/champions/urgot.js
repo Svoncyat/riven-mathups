@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const urgotMatchup = {
   id: 'urgot',
-  name: 'Urgot',
-  nickname: 'El Temor Más Allá de la Muerte',
+  name: await getChampionInfo.getChampionName('Urgot'),
+  nickname: await getChampionInfo.getChampionTitle('Urgot'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('Urgot'),
   

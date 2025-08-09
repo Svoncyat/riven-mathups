@@ -1,10 +1,10 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 
 export const chogathMatchup = {
   id: 'chogath',
-  name: "Cho'Gath",
-  nickname: 'El Terror del Vacío',
+  name: await getChampionInfo.getChampionName('Chogath'),
+  nickname: await getChampionInfo.getChampionTitle('Chogath'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Chogath.png',
   abilities: {

@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const illaoiMatchup = {
   id: 'illaoi',
-  name: 'Illaoi',
-  nickname: 'La Sacerdotisa del Kraken',
+  name: await getChampionInfo.getChampionName('Illaoi'),
+  nickname: await getChampionInfo.getChampionTitle('Illaoi'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Illaoi.png',
   abilities: {

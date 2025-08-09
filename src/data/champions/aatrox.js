@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const aatroxMatchup = {
   id: 'aatrox',
-  name: 'Aatrox',
-  nickname: 'La Espada Darkin',
+  name: await getChampionInfo.getChampionName('Aatrox'),
+  nickname: await getChampionInfo.getChampionTitle('Aatrox'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('Aatrox'),
   abilities: {

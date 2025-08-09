@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const kledMatchup = {
   id: 'kled',
-  name: 'Kled',
-  nickname: 'El Jinete Cantankerous',
+  name: await getChampionInfo.getChampionName('Kled'),
+  nickname: await getChampionInfo.getChampionTitle('Kled'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Kled.png',
   abilities: {

@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const udyrMatchup = {
   id: 'udyr',
-  name: 'Udyr',
-  nickname: 'El Caminante de los Espíritus',
+  name: await getChampionInfo.getChampionName('Udyr'),
+  nickname: await getChampionInfo.getChampionTitle('Udyr'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: await generateImageUrl.championPortrait('Udyr'),
   

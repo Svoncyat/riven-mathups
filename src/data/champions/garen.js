@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const garenMatchup = {
   id: 'garen',
-  name: 'Garen',
-  nickname: 'El Poder de Demacia',
+  name: await getChampionInfo.getChampionName('Garen'),
+  nickname: await getChampionInfo.getChampionTitle('Garen'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Garen.png',
   abilities: {

@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const gnarMatchup = {
   id: 'gnar',
-  name: 'Gnar',
-  nickname: 'El Eslabón Perdido',
+  name: await getChampionInfo.getChampionName('Gnar'),
+  nickname: await getChampionInfo.getChampionTitle('Gnar'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Gnar.png',
   abilities: {

@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const shyvanaMatchup = {
   id: 'shyvana',
-  name: 'Shyvana',
-  nickname: 'La Medio Dragón',
+  name: await getChampionInfo.getChampionName('Shyvana'),
+  nickname: await getChampionInfo.getChampionTitle('Shyvana'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: await generateImageUrl.championPortrait('Shyvana'),
 

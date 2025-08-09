@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const neekoMatchup = {
   id: 'neeko',
-  name: 'Neeko',
-  nickname: 'La Camaleona Curiosa',
+  name: await getChampionInfo.getChampionName('Neeko'),
+  nickname: await getChampionInfo.getChampionTitle('Neeko'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Neeko.png',
   

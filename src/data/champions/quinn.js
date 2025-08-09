@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const quinnMatchup = {
   id: 'quinn',
-  name: 'Quinn',
-  nickname: 'Las Alas de Demacia',
+  name: await getChampionInfo.getChampionName('Quinn'),
+  nickname: await getChampionInfo.getChampionTitle('Quinn'),
   difficulty: DIFFICULTY_LEVELS.EXTREME,
   portrait: await generateImageUrl.championPortrait('Quinn'),
   

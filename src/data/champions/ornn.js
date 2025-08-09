@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const ornnMatchup = {
   id: 'ornn',
-  name: 'Ornn',
-  nickname: 'El Fuego Bajo la Montaña',
+  name: await getChampionInfo.getChampionName('Ornn'),
+  nickname: await getChampionInfo.getChampionTitle('Ornn'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Ornn.png',
   

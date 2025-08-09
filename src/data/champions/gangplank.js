@@ -1,10 +1,10 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 
 export const gangplankMatchup = {
   id: 'gangplank',
-  name: 'Gangplank',
-  nickname: 'El Azote de los Mares',
+  name: await getChampionInfo.getChampionName('Gangplank'),
+  nickname: await getChampionInfo.getChampionTitle('Gangplank'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Gangplank.png',
   abilities: {

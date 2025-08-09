@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const galioMatchup = {
   id: 'galio',
-  name: 'Galio',
-  nickname: 'El Coloso',
+  name: await getChampionInfo.getChampionName('Galio'),
+  nickname: await getChampionInfo.getChampionTitle('Galio'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Galio.png',
   abilities: {

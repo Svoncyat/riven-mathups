@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const settMatchup = {
   id: 'sett',
-  name: 'Sett',
-  nickname: 'El Jefe',
+  name: await getChampionInfo.getChampionName('Sett'),
+  nickname: await getChampionInfo.getChampionTitle('Sett'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: await generateImageUrl.championPortrait('Sett'),
   

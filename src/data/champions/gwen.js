@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const gwenMatchup = {
   id: 'gwen',
-  name: 'Gwen',
-  nickname: 'La Costurera Sagrada',
+  name: await getChampionInfo.getChampionName('Gwen'),
+  nickname: await getChampionInfo.getChampionTitle('Gwen'),
   difficulty: DIFFICULTY_LEVELS.EASY,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Gwen.png',
   abilities: {

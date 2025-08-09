@@ -18,8 +18,34 @@ export const getLatestVersion = async () => {
   }
 };
 
+// Función para obtener el idioma de la API
+export const getGameLanguage = async (language = 'en_US') => {
+  try {
+    const response = await fetch('https://ddragon.leagueoflegends.com/cdn/languages.json');
+    const availableLanguages = await response.json();
+    return availableLanguages.includes(language) ? language : 'en_US';
+  } catch (error) {
+    console.error('Error al obtener el idioma:', error);
+    return 'en_US';
+  }
+}
+
+export const getChampionData = async (version) => {
+  try {
+    const language = await getGameLanguage('es_ES');
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/${language}/champion.json`);
+    const championData = await response.json();
+    return championData;
+  } catch (error) {
+    console.error('Error al obtener la información del campeón:', error);
+    return {}
+  };
+}
+
 // URLs base para recursos de League of Legends (dinámicas)
-export const createUrls = (version) => ({
+export const createUrls = (version, language = 'es_MX') => ({
+  CHAMPION_NAME: `https://ddragon.leagueoflegends.com/cdn/${version}/data/${language}/champion.json`,
+  CHAMPION_NICKNAME: `https://ddragon.leagueoflegends.com/cdn/${version}/data/${language}/champion/`,
   CHAMPION_PORTRAIT: `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion`,
   CHAMPION_PASSIVE: `https://ddragon.leagueoflegends.com/cdn/${version}/img/passive`,
   CHAMPION_SPELL: `https://ddragon.leagueoflegends.com/cdn/${version}/img/spell`,
@@ -31,14 +57,42 @@ export const createUrls = (version) => ({
 });
 
 // URLs con versión por defecto (se actualizarán dinámicamente)
-let URLS = createUrls('15.15.1');
+let URLS = createUrls('15.15.1', 'es_MX');
 
 // Inicializar URLs con la última versión
-getLatestVersion().then(version => {
-  URLS = createUrls(version);
+getLatestVersion().then(async version => {
+  const language = await getGameLanguage('es_MX');
+  URLS = createUrls(version, language);
 });
 
 export { URLS };
+
+export const getChampionInfo = {
+  getChampionName: async (championKey) => {
+    try {
+      const version = await getLatestVersion();
+      const championData = await getChampionData(version);
+      const championInfo = championData.data[championKey];
+      const name = championInfo ? championInfo.name : 'champion no encontrado';
+      return name.charAt(0).toUpperCase() + name.slice(1);
+    } catch (error) {
+      console.error('Error al obtener el nombre del campeón:', error);
+      return 'Error al cargar';
+    }
+  },
+  getChampionTitle: async (championKey) => {
+    try {
+      const version = await getLatestVersion();
+      const championData = await getChampionData(version);
+      const championInfo = championData.data[championKey];
+      const title = championInfo ? championInfo.title : 'título no encontrado';
+      return title.charAt(0).toUpperCase() + title.slice(1);
+    } catch (error) {
+      console.error('Error al obtener el título del campeón:', error);
+      return 'Error al cargar';
+    }
+  },
+}
 
 // Funciones helper para generar URLs (dinámicas)
 export const generateImageUrl = {

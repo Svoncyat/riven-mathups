@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const gragasMatchup = {
   id: 'gragas',
-  name: 'Gragas',
-  nickname: 'El Revoltoso',
+  name: await getChampionInfo.getChampionName('Gragas'),
+  nickname: await getChampionInfo.getChampionTitle('Gragas'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Gragas.png',
   abilities: {

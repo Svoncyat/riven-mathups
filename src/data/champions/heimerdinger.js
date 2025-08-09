@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const heimerdingerMatchup = {
   id: 'heimerdinger',
-  name: 'Heimerdinger',
-  nickname: 'El Venerable Inventor',
+  name: await getChampionInfo.getChampionName('Heimerdinger'),
+  nickname: await getChampionInfo.getChampionTitle('Heimerdinger'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Heimerdinger.png',
   abilities: {

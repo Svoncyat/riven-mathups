@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const kennenMatchup = {
   id: 'kennen',
-  name: 'Kennen',
-  nickname: 'El Corazón de la Tempestad',
+  name: await getChampionInfo.getChampionName('Kennen'),
+  nickname: await getChampionInfo.getChampionTitle('Kennen'),
   difficulty: DIFFICULTY_LEVELS.EXTREME,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Kennen.png',
 

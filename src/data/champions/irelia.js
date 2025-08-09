@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const ireliaMatchup = {
   id: 'irelia',
-  name: 'Irelia',
-  nickname: 'The Blade Dancer',
+  name: await getChampionInfo.getChampionName('Irelia'),
+  nickname: await getChampionInfo.getChampionTitle('Irelia'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/Irelia.png',
   abilities: {

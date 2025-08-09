@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const cassiopeiaMatchup = {
   id: 'cassiopeia',
-  name: 'Cassiopeia',
-  nickname: 'El Abrazo de la Serpiente',
+  name: await getChampionInfo.getChampionName('Cassiopeia'),
+  nickname: await getChampionInfo.getChampionTitle('Cassiopeia'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Cassiopeia.png',
   abilities: {

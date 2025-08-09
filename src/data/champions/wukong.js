@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const wukongMatchup = {
   id: 'wukong',
-  name: 'Wukong',
-  nickname: 'El Rey Mono',
+  name: await getChampionInfo.getChampionName('MonkeyKing'),
+  nickname: await getChampionInfo.getChampionTitle('MonkeyKing'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('MonkeyKing'),
   

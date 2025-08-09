@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const jaxMatchup = {
   id: 'jax',
-  name: 'Jax',
-  nickname: 'Grandmaster at Arms',
+  name: await getChampionInfo.getChampionName('Jax'),
+  nickname: await getChampionInfo.getChampionTitle('Jax'),
   difficulty: DIFFICULTY_LEVELS.HARD,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Jax.png',
   abilities: {

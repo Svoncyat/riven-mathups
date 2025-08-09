@@ -1,10 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
-import { generateImageUrl } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const rengarMatchup = {
   id: 'rengar',
-  name: 'Rengar',
-  nickname: 'El Orgullo Acechante',
+  name: await getChampionInfo.getChampionName('Rengar'),
+  nickname: await getChampionInfo.getChampionTitle('Rengar'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: await generateImageUrl.championPortrait('Rengar'),
   

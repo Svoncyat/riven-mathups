@@ -1,9 +1,9 @@
-import { DIFFICULTY_LEVELS } from '../constants.js';
+ import { DIFFICULTY_LEVELS, getChampionInfo, generateImageUrl } from '../constants.js';
 
 export const lilliaMatchup = {
   id: 'lillia',
-  name: 'Lillia',
-  nickname: 'La Dríade Tímida',
+  name: await getChampionInfo.getChampionName('Lillia'),
+  nickname: await getChampionInfo.getChampionTitle('Lillia'),
   difficulty: DIFFICULTY_LEVELS.MEDIUM,
   portrait: 'https://ddragon.leagueoflegends.com/cdn/15.15.1/img/champion/Lillia.png',
   
